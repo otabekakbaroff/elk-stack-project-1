@@ -70,12 +70,37 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- _It reduces a lot of manual work going to every single machine and adjusting configurations_
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+```
+- name: Configure Elk VM with Docker
+  	  hosts: elk
+  	  remote_user: sysadmin
+ 	  become: true
+  	  tasks:
+```
+
+- _Increase system memory:_
+```
+- name: Use more memory
+      	  sysctl:
+       	  name: vm.max_map_count
+          value: "262144"
+          state: present
+          reload: yes
+```
+
+- _Install the following packages:_
+	- _Docker.io_
+	- _Python3-pip_
+	- _Docker elk container_
+
+- _Launch docker container with these ports:_
+	- _5601:5601_
+	- _9200:9200_
+	- _5044:5044_
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
