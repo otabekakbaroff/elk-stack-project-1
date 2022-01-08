@@ -135,4 +135,3 @@ SSH into the control node and follow the steps below:
 - 137.135.15.200 (public address for kibana in elk server) port 5601 in order to check if kibana is up and running
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
