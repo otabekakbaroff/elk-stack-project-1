@@ -42,28 +42,30 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web 1    | Server   | 10.0.0.5   | Linux            |
+| Web 2    | Server   | 10.0.0.6   | Linux            |
+| Web 3    | Server   | 10.0.0.7   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBoxProvisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _123.123.123.123 which is shown on the diagram as workstation and can be changed to desired location_
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by machine within the network.
+- _ansible configured machine only has access to elk server which comes from 10.0.0.4 ip address_
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name             | Publicly Accessible | Allowed IP Addresses |
+|------------------|---------------------|----------------------|
+| Jump Box         |        Yes          |  123.123.123.123     |
+| Web 1            |        No           |  10.0.0.4            |
+| Web 2            |        No           |  10.0.0.4            |
+| Web 3            |        No           |  10.0.0.4            |
+| Load Balancer    |        No           |  123.123.123.123     |
 
 ### Elk Configuration
 
