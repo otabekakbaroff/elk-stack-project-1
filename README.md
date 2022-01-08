@@ -6,9 +6,15 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](diagrams/network_diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeatConf.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  [ansible docker configuration on web servers](ansible/dockerConf.yml)
+
+  [ansible elk configuration](ansible/elkConf.yml)
+
+  [ansible filebeat configuration](ansible/filebeatConf.yml)
+
+  [ansible web metricbeat configuration](ansible/metricbeatConf.yml)
 
 This document contains the following details:
 - Description of the Topologu
